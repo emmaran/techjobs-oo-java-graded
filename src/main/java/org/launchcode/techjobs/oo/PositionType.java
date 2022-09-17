@@ -1,5 +1,7 @@
 package org.launchcode.techjobs.oo;
 
+import java.util.Objects;
+
 public class PositionType {
 
     private int id;
@@ -35,6 +37,11 @@ public class PositionType {
         if (!(o instanceof PositionType)) return false;
         PositionType positionType = (PositionType) o;
         return getId() == positionType.getId();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, value);
     }
 
     // Getters and Setters:
